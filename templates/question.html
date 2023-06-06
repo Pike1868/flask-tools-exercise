@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Survey</h1>
+
+<p id="instructions">Please read the question and select an answer.</p>
+
+<form action="/answer/{{curr_index}}" method="POST">
+    <div class="question_group">
+        <p class="question_text"> {{current_question.question}}</p>
+
+        {% for choice in choices %}
+        <label for="answer">{{choice}}
+            <input type="radio" name="answer" id="{{choice}}" required>
+        </label>
+
+
+        {% endfor %}
+
+    </div>
+    <input type="submit" value="Submit" class="btn" id="submit_question_btn">
+</form>
+
+
+{% endblock content %}
