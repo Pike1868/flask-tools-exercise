@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-
+{% block title%} Flask Survey App {% endblock %}
 {% block content %}
 <h1>Flask Survey App</h1>
 
 <p id="instructions">Please click start to begin the survey.</p>
 
-<form action="/start" method="post">
+<form id="start_form" action="/start" method="post">
     <input type="submit" class="btn" value="Start"></input>
 </form>
 

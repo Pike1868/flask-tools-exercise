@@ -56,3 +56,7 @@ form {
 .question_group {
   text-align: center;
 }
+
+#start_form {
+  background-color: #f9f9f9;
+}
